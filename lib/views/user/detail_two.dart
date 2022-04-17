@@ -1,13 +1,20 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:src/models/prescription.dart';
 import 'package:src/shared/custom_style.dart';
 import 'package:src/shared/custom_components.dart';
 import 'package:src/views/scanner/detail_screen.dart';
 
+
 class DetailMeds extends StatelessWidget {
   static const routeName = '/detail_two';
   final List<String> inpu;
-  const DetailMeds({ this.inpu});
+  DetailMeds({ this.inpu });
+
+  String baseUrl = "http://192.168.29.5:8000/drugs/drug/Chymapra Tablet";
 
 
   String _returninp(){
@@ -15,6 +22,24 @@ class DetailMeds extends StatelessWidget {
     List<String> splistring= inpu[0].split(' 1-');
     return splistring[0];
   }
+
+  void getDrugDetails() async {
+    try{
+      http.Response response = await http.get(Uri.parse(baseUrl));
+      if(response.statusCode == 200){
+        print(response.body);
+        List data = jsonDecode(response.body);
+        print(data);
+        return jsonDecode(response.body);
+      }else{
+        return Future.error('Server error');
+      }
+    }catch(e){
+      Future.error(e);
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
