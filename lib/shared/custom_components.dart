@@ -1,6 +1,7 @@
 import 'package:src/shared/custom_style.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:src/views/user/detail_two.dart';
 
 class CustomSpinner extends StatelessWidget {
   final bool toggleSpinner;
@@ -415,76 +416,76 @@ class CustomAdminDrawer extends StatelessWidget {
               },
               subtitle: Text('visitor appointments',style: TextStyle(color: Colors.white),),
             ),
-            ListTile(
-              leading: Icon(Icons.healing_rounded, color: Colors.green),
-              title: Text(
-                "Vaccination",
-                style: cNavText,
-              ),
-              onTap: () => {
-                Navigator.pushReplacementNamed(
-                  context,
-                  '/appointments',
-                )
-              },
-              subtitle: Text('Patient Vaccination',style: TextStyle(color: Colors.white),),
-            ),
-            ListTile(
-              leading: Icon(Icons.view_headline, color: Colors.greenAccent),
-              title: Text(
-                "OPD/IPD",
-                style: cNavText,
-              ),
-              onTap: () => {
-                Navigator.pushReplacementNamed(
-                  context,
-                  '/appointments',
-                )
-              },
-              subtitle: Text('OPD/IPD',style: TextStyle(color: Colors.white),),
-            ),
-            ListTile(
-              leading: Icon(Icons.hot_tub, color: Colors.red),
-              title: Text(
-                "Pharmacy",
-                style: cNavText,
-              ),
-              onTap: () => {
-                Navigator.pushReplacementNamed(
-                  context,
-                  '/appointments',
-                )
-              },
-              subtitle: Text('Pharmacy transactions',style: TextStyle(color: Colors.white),),
-            ),
-            ListTile(
-              leading: Icon(Icons.sanitizer, color: Colors.orangeAccent),
-              title: Text(
-                "Lab Results",
-                style: cNavText,
-              ),
-              onTap: () => {
-                Navigator.pushReplacementNamed(
-                  context,
-                  '/appointments',
-                )
-              },
-              subtitle: Text('Patient Pathology Lab records',style: TextStyle(color: Colors.white),),
-            ),
-            ListTile(
-              leading: Icon(Icons.sms, color: Colors.deepPurple),
-              title: Text(
-                "Messages",
-                style: cNavText,
-              ),
-              onTap: () => {
-                Navigator.pushReplacementNamed(
-                  context,
-                  '/appointments',
-                )
-              },
-              subtitle: Text('patient messages',style: TextStyle(color: Colors.white),),
-            ),
+            // ListTile(
+            //   leading: Icon(Icons.healing_rounded, color: Colors.green),
+            //   title: Text(
+            //     "Vaccination",
+            //     style: cNavText,
+            //   ),
+            //   onTap: () => {
+            //     Navigator.pushReplacementNamed(
+            //       context,
+            //       '/appointments',
+            //     )
+            //   },
+            //   subtitle: Text('Patient Vaccination',style: TextStyle(color: Colors.white),),
+            // ),
+            // ListTile(
+            //   leading: Icon(Icons.view_headline, color: Colors.greenAccent),
+            //   title: Text(
+            //     "OPD/IPD",
+            //     style: cNavText,
+            //   ),
+            //   onTap: () => {
+            //     Navigator.pushReplacementNamed(
+            //       context,
+            //       '/appointments',
+            //     )
+            //   },
+            //   subtitle: Text('OPD/IPD',style: TextStyle(color: Colors.white),),
+            // ),
+            // ListTile(
+            //   leading: Icon(Icons.hot_tub, color: Colors.red),
+            //   title: Text(
+            //     "Pharmacy",
+            //     style: cNavText,
+            //   ),
+            //   onTap: () => {
+            //     Navigator.pushReplacementNamed(
+            //       context,
+            //       '/appointments',
+            //     )
+            //   },
+            //   subtitle: Text('Pharmacy transactions',style: TextStyle(color: Colors.white),),
+            // ),
+            // ListTile(
+            //   leading: Icon(Icons.sanitizer, color: Colors.orangeAccent),
+            //   title: Text(
+            //     "Lab Results",
+            //     style: cNavText,
+            //   ),
+            //   onTap: () => {
+            //     Navigator.pushReplacementNamed(
+            //       context,
+            //       '/appointments',
+            //     )
+            //   },
+            //   subtitle: Text('Patient Pathology Lab records',style: TextStyle(color: Colors.white),),
+            // ),
+            // ListTile(
+            //   leading: Icon(Icons.sms, color: Colors.deepPurple),
+            //   title: Text(
+            //     "Messages",
+            //     style: cNavText,
+            //   ),
+            //   onTap: () => {
+            //     Navigator.pushReplacementNamed(
+            //       context,
+            //       '/appointments',
+            //     )
+            //   },
+            //   subtitle: Text('patient messages',style: TextStyle(color: Colors.white),),
+            // ),
             // ListTile(
             //   leading: Icon(Icons.dashboard, color: Colors.deepOrange),
             //   title: Text(
@@ -622,20 +623,20 @@ class CustomGuestDrawer extends StatelessWidget {
               trailing: Icon(Icons.more_vert),
               isThreeLine: true,
             ),
-            ListTile(
-              leading: Icon(Icons.sms, color: Colors.deepPurple),
-              title: Text(
-                "Messages",
-                style: cNavText,
-              ),
-              onTap: () => {
-                Navigator.pushReplacementNamed(
-                  context,
-                  '/records',
-                )
-              },
-              subtitle: Text('patient messages',style: TextStyle(color: Colors.white),),
-            ),
+            // ListTile(
+            //   leading: Icon(Icons.sms, color: Colors.deepPurple),
+            //   title: Text(
+            //     "Messages",
+            //     style: cNavText,
+            //   ),
+            //   onTap: () => {
+            //     Navigator.pushReplacementNamed(
+            //       context,
+            //       '/records',
+            //     )
+            //   },
+            //   subtitle: Text('patient messages',style: TextStyle(color: Colors.white),),
+            // ),
             ListTile(
               leading: Icon(Icons.file_upload, color: Colors.deepPurple),
               title: Text(
@@ -650,21 +651,37 @@ class CustomGuestDrawer extends StatelessWidget {
               },
               subtitle: Text('Upload images/videos or pdf',style: TextStyle(color: Colors.white),),
             ),
+
+
             ListTile(
               leading: Icon(Icons.file_upload, color: Colors.deepPurple),
               title: Text(
                 "Scan Documents",
                 style: cNavText,
               ),
-              onTap: () => {
+              onTap: () =>
+              {
                 Navigator.pushReplacementNamed(
                   context,
                   '/scan',
-                )
+                ),
+              } ,
+              ),
+            ListTile(
+              leading: Icon(Icons.file_upload, color: Colors.deepPurple),
+              title: Text(
+                "Dummy",
+                style: cNavText,
+              ),
+              onTap: () => {
+                Navigator.pushReplacementNamed(
+                  context,
+                  '/detail_two',
+                ),
               },
               subtitle: Text('Upload images/videos or pdf',style: TextStyle(color: Colors.white),),
             ),
-            ElevatedButton(
+              ElevatedButton(
               child: Text('Logout',style: TextStyle(color: bgcolor),),
               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(butcolor)),
               onPressed: () {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:src/views/scanner/camera_screen.dart';
 import 'package:src/shared/custom_style.dart';
+import 'package:src/shared/custom_components.dart';
 
 
 class Scanner extends StatefulWidget {
@@ -14,10 +15,12 @@ class _ScannerState extends State<Scanner> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgcolor,
       appBar: AppBar(
         title: Text('Medicord'),
         centerTitle: true,
       ),
+      drawer: Drawer(child: CustomGuestDrawer()),
       body: Container(
         padding: EdgeInsets.all(32),
         child: Center(

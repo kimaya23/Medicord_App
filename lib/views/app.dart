@@ -30,7 +30,7 @@ import 'package:src/views/scm/center.dart';
 import 'package:src/views/scm/vendor.dart';
 import 'package:src/views/scm/warehouse.dart';
 import 'package:src/views/scm/item.dart';
-
+import 'package:src/views/user/detail_two.dart';
 //import 'package:gallery/l10n/gallery_localizations.dart';
 
 class App extends StatelessWidget {
@@ -84,6 +84,7 @@ class App extends StatelessWidget {
         Item.routeName: (context) => Item(),
         Admin.routeName: (context) => Admin(),
         AdminEdit.routeName: (context) => AdminEdit(),
+        DetailMeds.routeName: (context) => DetailMeds(),
       },
     );
   }

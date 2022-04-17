@@ -441,22 +441,22 @@ class OPDState extends State<OPD> {
                 subtitle: Column(
                   children: [
                     const Divider(
-                      color: Colors.black,
+                      color: Colors.white,
                       height: 5,
                       thickness: 2,
                     ),
                     Row(
                       children: [
-                        new Text("Appointment Date: "),
-                        new Text(document.get('appointmentDate')),
+                        new Text("Appointment Date: ",style: TextStyle(color: Colors.white),),
+                        new Text(document.get('appointmentDate'),style: TextStyle(color: Colors.white),),
                       ],
                     ),
                     Row(
                       children: [
                         Row(
                           children: [
-                            new Text(" Next Appointment: "),
-                            new Text(document.get('newAppointmentDate')),
+                            new Text(" Next Appointment: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('newAppointmentDate'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -510,16 +510,16 @@ class OPDState extends State<OPD> {
                     ),
                     Row(
                       children: [
-                        new Text("Name: "),
-                        new Text(document.get('name')),
+                        new Text("Name: ",style: TextStyle(color: Colors.white),),
+                        new Text(document.get('name'),style: TextStyle(color: Colors.white),),
                       ],
                     ),
                     Row(
                       children: [
                         Row(
                           children: [
-                            new Text("Address: "),
-                            new Text(document.get('address')),
+                            new Text("Address: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('address'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -528,8 +528,8 @@ class OPDState extends State<OPD> {
                       children: [
                         Row(
                           children: [
-                            new Text("Id: "),
-                            new Text(document.get('id')),
+                            new Text("Id: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('id'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -538,8 +538,8 @@ class OPDState extends State<OPD> {
                       children: [
                         Row(
                           children: [
-                            new Text("ID Type: "),
-                            new Text(document.get('idType')),
+                            new Text("ID Type: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('idType'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -548,8 +548,8 @@ class OPDState extends State<OPD> {
                       children: [
                         Row(
                           children: [
-                            new Text("DOB: "),
-                            new Text(document.get('dob')),
+                            new Text("DOB: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('dob'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -558,8 +558,8 @@ class OPDState extends State<OPD> {
                       children: [
                         Row(
                           children: [
-                            new Text("Medical History: "),
-                            new Text(document.get('medicalHistory')),
+                            new Text("Medical History: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('medicalHistory'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -619,9 +619,9 @@ class OPDState extends State<OPD> {
                 ),
                 subtitle: Column(
                   children: [
-                    new Text(document.get('opdDate').toDate().toString()),
+                    new Text(document.get('opdDate').toDate().toString(),style: TextStyle(color: Colors.white),),
                     const Divider(
-                      color: Colors.black,
+                      color: Colors.white,
                       height: 5,
                       thickness: 2,
                       // indent: 20,
@@ -629,16 +629,16 @@ class OPDState extends State<OPD> {
                     ),
                     Row(
                       children: [
-                        new Text("Symptoms: "),
-                        new Text(document.get('symptoms')),
+                        new Text("Symptoms: ",style: TextStyle(color: Colors.white),),
+                        new Text(document.get('symptoms'),style: TextStyle(color: Colors.white),),
                       ],
                     ),
                     Row(
                       children: [
                         Row(
                           children: [
-                            new Text(" Diagnosis: "),
-                            new Text(document.get('diagnosis')),
+                            new Text(" Diagnosis: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('diagnosis'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -647,8 +647,8 @@ class OPDState extends State<OPD> {
                       children: [
                         Row(
                           children: [
-                            new Text(" Rx: "),
-                            new Text(document.get('rx')),
+                            new Text(" Rx: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('rx'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -657,8 +657,8 @@ class OPDState extends State<OPD> {
                       children: [
                         Row(
                           children: [
-                            new Text(" Lab: "),
-                            new Text(document.get('lab')),
+                            new Text(" Lab: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('lab'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -667,8 +667,8 @@ class OPDState extends State<OPD> {
                       children: [
                         Row(
                           children: [
-                            new Text(" Treatment: "),
-                            new Text(document.get('treatment')),
+                            new Text(" Treatment: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('treatment'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -730,16 +730,16 @@ class OPDState extends State<OPD> {
                     ),
                     Row(
                       children: [
-                        new Text("From: "),
-                        new Text(document.get('from')),
+                        new Text("From: ",style: TextStyle(color: Colors.white),),
+                        new Text(document.get('from'),style: TextStyle(color: Colors.white),),
                       ],
                     ),
                     Row(
                       children: [
                         Row(
                           children: [
-                            new Text(" Status: "),
-                            new Text(document.get('status')),
+                            new Text(" Status: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('status'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -748,8 +748,8 @@ class OPDState extends State<OPD> {
                       children: [
                         Row(
                           children: [
-                            new Text(" Pharmacy: "),
-                            new Text(document.get('rx')),
+                            new Text(" Pharmacy: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('rx'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -758,8 +758,8 @@ class OPDState extends State<OPD> {
                       children: [
                         Row(
                           children: [
-                            new Text(" Results: "),
-                            new Text(document.get('results')),
+                            new Text(" Results: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('results'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -813,7 +813,7 @@ class OPDState extends State<OPD> {
                   children: [
                     new Text(document.get('labDate').toDate().toString()),
                     const Divider(
-                      color: Colors.black,
+                      color: Colors.white,
                       height: 5,
                       thickness: 2,
                       // indent: 20,
@@ -821,16 +821,16 @@ class OPDState extends State<OPD> {
                     ),
                     Row(
                       children: [
-                        new Text("From: "),
-                        new Text(document.get('from')),
+                        new Text("From: ",style: TextStyle(color: Colors.white),),
+                        new Text(document.get('from'),style: TextStyle(color: Colors.white),),
                       ],
                     ),
                     Row(
                       children: [
                         Row(
                           children: [
-                            new Text(" Status: "),
-                            new Text(document.get('status')),
+                            new Text(" Status: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('status'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -839,8 +839,8 @@ class OPDState extends State<OPD> {
                       children: [
                         Row(
                           children: [
-                            new Text(" Pathology: "),
-                            new Text(document.get('lab')),
+                            new Text(" Pathology: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('lab'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -849,8 +849,8 @@ class OPDState extends State<OPD> {
                       children: [
                         Row(
                           children: [
-                            new Text(" Results: "),
-                            new Text(document.get('results')),
+                            new Text(" Results: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('results'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -911,16 +911,16 @@ class OPDState extends State<OPD> {
                     ),
                     Row(
                       children: [
-                        new Text("Appointment Date: "),
-                        new Text(document.get('appointmentDate')),
+                        new Text("Appointment Date: ",style: TextStyle(color: Colors.white),),
+                        new Text(document.get('appointmentDate'),style: TextStyle(color: Colors.white),),
                       ],
                     ),
                     Row(
                       children: [
                         Row(
                           children: [
-                            new Text(" Next Appointment: "),
-                            new Text(document.get('newAppointmentDate')),
+                            new Text(" Next Appointment: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('newAppointmentDate'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],

@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:src/shared/custom_style.dart';
+import 'package:src/shared/custom_components.dart';
 import '/views/api/firebase_api.dart';
 import '/views/widget/button_widget.dart';
 import 'package:flutter/material.dart';
@@ -24,31 +26,40 @@ class _UploadState extends State<Upload> {
     final fileName = file != null ? basename(file.path) : 'No File Selected';
 
     return Scaffold(
+      backgroundColor: bgcolor,
       appBar: AppBar(
-        title: Text('Medicord'),
+        backgroundColor: butcolor,
+        title: Text('Medicord',style: TextStyle(color: bgcolor),),
         centerTitle: true,
       ),
+      drawer: Drawer(child: CustomGuestDrawer(),),
       body: Container(
         padding: EdgeInsets.all(32),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ButtonWidget(
-                text: 'Select File',
-                icon: Icons.attach_file,
-                onClicked: selectFile,
+              ElevatedButton(
+                child: Text('Select File'),
+                //icon: Icons.attach_file,
+                onPressed: selectFile,
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(butcolor),
+                ),
               ),
               SizedBox(height: 8),
               Text(
                 fileName,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500,color: Colors.white),
               ),
               SizedBox(height: 48),
-              ButtonWidget(
-                text: 'Upload File',
-                icon: Icons.cloud_upload_outlined,
-                onClicked: uploadFile,
+              ElevatedButton(
+                child: Text('Upload File',style: TextStyle(color: Colors.white),),
+                //icon: Icons.cloud_upload_outlined,
+                onPressed: uploadFile,
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(butcolor),
+                ),
               ),
               SizedBox(height: 20),
               task != null ? buildUploadStatus(task) : Container(),
@@ -95,7 +106,7 @@ class _UploadState extends State<Upload> {
 
         return Text(
           '$percentage %',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white),
         );
       } else {
         return Container();

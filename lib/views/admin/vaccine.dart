@@ -392,22 +392,22 @@ class VaccineState extends State<Vaccine> {
                 subtitle: Column(
                   children: [
                     const Divider(
-                      color: Colors.black,
+                      color: Colors.white,
                       height: 5,
                       thickness: 2,
                     ),
                     Row(
                       children: [
-                        new Text("Appointment Date: "),
-                        new Text(document.get('appointmentDate')),
+                        new Text("Appointment Date: ",style: TextStyle(color: Colors.white),),
+                        new Text(document.get('appointmentDate'),style: TextStyle(color: Colors.white),),
                       ],
                     ),
                     Row(
                       children: [
                         Row(
                           children: [
-                            new Text(" Next Appointment: "),
-                            new Text(document.get('newAppointmentDate')),
+                            new Text(" Next Appointment: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('newAppointmentDate'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -453,7 +453,7 @@ class VaccineState extends State<Vaccine> {
                 subtitle: Column(
                   children: [
                     const Divider(
-                      color: Colors.black,
+                      color: Colors.white,
                       height: 5,
                       thickness: 2,
                       // indent: 20,
@@ -461,16 +461,16 @@ class VaccineState extends State<Vaccine> {
                     ),
                     Row(
                       children: [
-                        new Text("Name: "),
-                        new Text(document.get('name')),
+                        new Text("Name: ",style: TextStyle(color: Colors.white),),
+                        new Text(document.get('name'),style: TextStyle(color: Colors.white),),
                       ],
                     ),
                     Row(
                       children: [
                         Row(
                           children: [
-                            new Text("Address: "),
-                            new Text(document.get('address')),
+                            new Text("Address: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('address'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -479,8 +479,8 @@ class VaccineState extends State<Vaccine> {
                       children: [
                         Row(
                           children: [
-                            new Text("Id: "),
-                            new Text(document.get('id')),
+                            new Text("Id: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('id'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -489,8 +489,8 @@ class VaccineState extends State<Vaccine> {
                       children: [
                         Row(
                           children: [
-                            new Text("ID Type: "),
-                            new Text(document.get('idType')),
+                            new Text("ID Type: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('idType'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -499,8 +499,8 @@ class VaccineState extends State<Vaccine> {
                       children: [
                         Row(
                           children: [
-                            new Text("DOB: "),
-                            new Text(document.get('dob')),
+                            new Text("DOB: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('dob'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],
@@ -509,8 +509,8 @@ class VaccineState extends State<Vaccine> {
                       children: [
                         Row(
                           children: [
-                            new Text("Medical History: "),
-                            new Text(document.get('medicalHistory')),
+                            new Text("Medical History: ",style: TextStyle(color: Colors.white),),
+                            new Text(document.get('medicalHistory'),style: TextStyle(color: Colors.white),),
                           ],
                         )
                       ],

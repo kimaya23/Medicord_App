@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 import 'package:src/shared/custom_style.dart';
+import 'package:src/views/user/detail_two.dart';
 
 class DetailScreen extends StatefulWidget {
   final imagePath;
@@ -18,6 +19,7 @@ class _DetailScreenState extends State<DetailScreen> {
   TextDetector _textDetector;
   Size _imageSize;
   List<TextElement> _elements = [];
+  //String _inpu;
 
   List<String> _listpresStrings;
 
@@ -71,7 +73,12 @@ class _DetailScreenState extends State<DetailScreen> {
     RegExp regEx6 = RegExp(pattern6);
     RegExp regEx7 = RegExp(pattern7);
     List<String> presStrings = [];
+    // String medname = presStrings[0];
+    // List<String> splistring= presStrings[0].split(' 1-');
+    //_inpu = splistring[0];
 
+    //print(splistring);
+    print(presStrings);
     // Finding and storing the text String(s) and the TextElement(s)
     for (TextBlock block in text.blocks) {
       for (TextLine line in block.lines) {
@@ -170,6 +177,24 @@ class _DetailScreenState extends State<DetailScreen> {
                               Text(_listpresStrings[index]),
                         )
                             : Container(),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(butcolor),
+                      ),
+                      onPressed: () {
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => DetailMeds(inpu: _listpresStrings)));
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text('Is this your prescription',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),),
                       ),
                     ),
                   ],
