@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
 import 'package:src/models/prescription.dart';
 import 'package:src/shared/custom_style.dart';
 import 'package:src/shared/custom_components.dart';
@@ -25,11 +25,12 @@ class DetailMeds extends StatelessWidget {
 
   void getDrugDetails() async {
     try{
-      http.Response response = await http.get(Uri.parse(baseUrl));
+      var response = await get(Uri.parse(baseUrl));
+      var responseData = json.decode(response.body);
+
       if(response.statusCode == 200){
-        print(response.body);
-        List data = jsonDecode(response.body);
-        print(data);
+
+
         return jsonDecode(response.body);
       }else{
         return Future.error('Server error');

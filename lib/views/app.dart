@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
     return new Scaffold(
       backgroundColor: bgcolor,
       appBar: AppBar(
-          title: const Text(cAppTitle,style: TextStyle(color: bgcolor),),backgroundColor: butcolor,iconTheme: IconThemeData(color: bgcolor),),
+        title: const Text(cAppTitle,style: TextStyle(color: bgcolor),),backgroundColor: butcolor,iconTheme: IconThemeData(color: bgcolor),),
       body: ListView(
         children: [
           Center(
