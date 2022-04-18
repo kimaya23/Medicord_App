@@ -13,6 +13,7 @@ List<CameraDescription> cameras = [];
 
 Future main() async {
   try {
+
     WidgetsFlutterBinding.ensureInitialized();
     await SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
